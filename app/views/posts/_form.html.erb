@@ -1,0 +1,27 @@
+
+<center>
+        <form action="/create" method="post">
+            <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden" />
+            <input
+                placeholder="제목을 입력해주세요!"
+                class="title"
+                type="text"
+                id="title"
+                name="title"
+            />
+            <textarea
+                placeholder="내용을 입력해주세요!"
+                class="content"
+                type="text"
+                id="content"
+                name="content"
+            ></textarea>
+            <audio id="audio" loop autoplay src="/Jingle_Bells.mp3"></audio>
+            <script>
+                document.getElementById('audio').play();
+            </script>
+            <button type="submit" class="sendbtn">
+                보내기
+            </button>
+        </form>
+    </center>

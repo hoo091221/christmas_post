@@ -1,0 +1,3274 @@
+  [1m[35m (68.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (26.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (42.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePosts (20221203124026)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "posts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "content" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221203124026"]]
+  [1m[35m (19.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-12-03 12:44:45.844942"], ["updated_at", "2022-12-03 12:44:45.844942"]]
+  [1m[35m (17.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 172.17.0.1 at 2022-12-03 12:46:08 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 88.6ms | Allocations: 473)
+Completed 200 OK in 184ms (Views: 95.9ms | ActiveRecord: 0.0ms | Allocations: 3054)
+
+
+Started GET "/" for 172.17.0.1 at 2022-12-03 12:46:10 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.8ms | Allocations: 185)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 1087)
+
+
+Started GET "/posts" for 172.17.0.1 at 2022-12-03 12:46:17 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:15
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1419)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /workspace/Christmas/public/packs
+[Webpacker] Browserslist: caniuse-lite is outdated. Please run:
+npx browserslist@latest --update-db
+
+[Webpacker] Hash: 15d1bb7b54cf6326b9ba
+Version: webpack 4.43.0
+Time: 15183ms
+Built at: 2022-12-03 12:46:41 ├F10: PM┤
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-9afcbb5693aa87623e69.js    124 KiB  application  [emitted] [immutable]  application
+js/application-9afcbb5693aa87623e69.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-9afcbb5693aa87623e69.js js/application-9afcbb5693aa87623e69.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 24112ms (Views: 24107.9ms | ActiveRecord: 0.4ms | Allocations: 22680)
+
+
+Started GET "/posts" for 172.17.0.1 at 2022-12-03 12:54:06 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:15
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1265)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 11.5ms | ActiveRecord: 0.3ms | Allocations: 6671)
+
+
+Started GET "/posts" for 172.17.0.1 at 2022-12-03 12:54:30 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (42.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered posts/index.html.erb within layouts/application (Duration: 44.1ms | Allocations: 824)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 53ms (Views: 9.3ms | ActiveRecord: 42.2ms | Allocations: 5879)
+
+
+Started GET "/posts" for 172.17.0.1 at 2022-12-03 12:55:06 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (56.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:95
+  Rendered posts/index.html.erb within layouts/application (Duration: 58.4ms | Allocations: 931)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 67ms (Views: 9.9ms | ActiveRecord: 56.3ms | Allocations: 5981)
+
+
+Started GET "/posts" for 172.17.0.1 at 2022-12-03 12:55:52 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:100
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 931)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 92ms (Views: 10.1ms | ActiveRecord: 0.1ms | Allocations: 5974)
+
+
+Started GET "/posts" for 172.17.0.1 at 2022-12-03 12:56:15 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (34.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:100
+  Rendered posts/index.html.erb within layouts/application (Duration: 36.7ms | Allocations: 923)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 9.1ms | ActiveRecord: 34.6ms | Allocations: 5949)
+
+
+Started GET "/posts" for 172.17.0.1 at 2022-12-03 12:56:35 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:100
+  Rendered posts/index.html.erb within layouts/application (Duration: 13.5ms | Allocations: 923)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.2ms | Allocations: 5963)
+
+
+Started GET "/" for 172.17.0.1 at 2022-12-03 13:01:53 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 71.3ms | Allocations: 184)
+Completed 200 OK in 73ms (Views: 72.0ms | ActiveRecord: 0.0ms | Allocations: 1157)
+
+
+Started GET "/posts" for 172.17.0.1 at 2022-12-03 13:01:55 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (73.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:103
+  Rendered posts/index.html.erb within layouts/application (Duration: 75.5ms | Allocations: 928)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 82ms (Views: 7.5ms | ActiveRecord: 73.6ms | Allocations: 5934)
+
+
+Started GET "/posts" for 172.17.0.1 at 2022-12-03 13:05:30 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:103
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1546)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 17.6ms | ActiveRecord: 0.6ms | Allocations: 10055)
+
+
+Started GET "/posts" for 172.17.0.1 at 2022-12-03 13:05:53 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:103
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 936)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 11.8ms | ActiveRecord: 0.2ms | Allocations: 5947)
+
+
+Started GET "/posts" for 172.17.0.1 at 2022-12-03 13:06:29 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:103
+  Rendered posts/index.html.erb within layouts/application (Duration: 58.4ms | Allocations: 935)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 68ms (Views: 66.4ms | ActiveRecord: 0.2ms | Allocations: 5943)
+
+
+Started GET "/posts/new" for 172.17.0.1 at 2022-12-03 13:06:31 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 10.1ms | Allocations: 3495)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 3.0ms | Allocations: 7642)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+    <style>
+                * {
+                    box-sizing: border-box;
+                }
+
+                body {
+                    font-family: 'Gamja Flower', cursive;
+                    margin: 0;
+                    background-color: #f45757;
+                }
+
+                input {
+                    font-family: 'Gamja Flower', cursive;
+                    border-radius: 2vw;
+                    width: 70vw;
+                    text-align: center;
+                }
+
+                .title {
+                    height: 5vw;
+                    font-size: 3vw;
+                    margin-top: 10vw;
+                    margin-bottom: 5vw;
+                }
+
+                .content {
+                    height: 70vh;
+                    font-family: 'Gamja Flower', cursive;
+                    border-radius: 2vw;
+                    width: 70vw;
+                    text-align: center;
+                    font-size: 3vw;
+           			resize: none;
+                }
+		
+				body {
+        			-ms-overflow-style: none; /* 인터넷 익스플로러 */
+           			scrollbar-width: none; /* 파이어폭스 */
+        		}
+
+        		body::-webkit-scrollbar {
+            		display: none; /* 크롬, 사파리, 오페라, 엣지 */
+        		}
+
+        		.sendbtn {
+        			background-color: #088A4B;
+        			border: 0px;
+        			color: white;
+        			font-family: 'Gamja Flower', cursive;
+        			width: 70vw;
+        			height: 5vw;
+        			border-radius: 10vw;
+        			font-size: 3vw;
+        			margin-top: 5vw;
+        			margin-bottom: 5vw;
+        		}
+    </style>
+    <script
+        src="https://tistory3.daumcdn.net/tistory/941717/skin/images/jquery.min.js"
+        type="text/javascript"
+    ></script>
+    <script
+        src="https://tistory3.daumcdn.net/tistory/941717/skin/images/snowfall.jquery.js"
+        type="text/javascript"
+    ></script>
+    <script>
+        $(document).ready(function () {
+            $(document).snowfall({
+                deviceorientation: true,
+                round: true,
+                minSize: 1,
+                maxSize: 8,
+                flakeCount: 250,
+            });
+        });
+    </script>
+    <center>
+        <form action="/create" method="post">
+            <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden" />
+            <input
+                placeholder="제목을 입력해주세요!"
+                class="title"
+                type="text"
+                id="title"
+                name="title"
+            />
+            <textarea
+                placeholder="내용을 입력해주세요!"
+                class="content"
+                type="text"
+                id="content"
+                name="content"
+            ></textarea>
+            <audio id="audio" loop autoplay src="/Jingle_Bells.mp3"></audio>
+            <script>
+                document.getElementById('audio').play();
+            </script>
+            <button class="sendbtn">
+                보내기
+            </button>
+        </form>
+    </center>
+<%= #render 'form', post: @post %>
+
+<%= #link_to 'Back', posts_path %>
+
+):
+1:    
+2:        <style>
+3:                    * {
+4:                        box-sizing: border-box;
+5:                    }
+6:    
+7:                    body {
+8:                        font-family: 'Gamja Flower', cursive;
+9:                        margin: 0;
+10:                        background-color: #f45757;
+11:                    }
+12:    
+13:                    input {
+14:                        font-family: 'Gamja Flower', cursive;
+15:                        border-radius: 2vw;
+16:                        width: 70vw;
+17:                        text-align: center;
+18:                    }
+19:    
+20:                    .title {
+21:                        height: 5vw;
+22:                        font-size: 3vw;
+23:                        margin-top: 10vw;
+24:                        margin-bottom: 5vw;
+25:                    }
+26:    
+27:                    .content {
+28:                        height: 70vh;
+29:                        font-family: 'Gamja Flower', cursive;
+30:                        border-radius: 2vw;
+31:                        width: 70vw;
+32:                        text-align: center;
+33:                        font-size: 3vw;
+34:               			resize: none;
+35:                    }
+36:    		
+37:    				body {
+38:            			-ms-overflow-style: none; /* 인터넷 익스플로러 */
+39:               			scrollbar-width: none; /* 파이어폭스 */
+40:            		}
+41:    
+42:            		body::-webkit-scrollbar {
+43:                		display: none; /* 크롬, 사파리, 오페라, 엣지 */
+44:            		}
+45:    
+46:            		.sendbtn {
+47:            			background-color: #088A4B;
+48:            			border: 0px;
+49:            			color: white;
+50:            			font-family: 'Gamja Flower', cursive;
+51:            			width: 70vw;
+52:            			height: 5vw;
+53:            			border-radius: 10vw;
+54:            			font-size: 3vw;
+55:            			margin-top: 5vw;
+56:            			margin-bottom: 5vw;
+57:            		}
+58:        </style>
+59:        <script
+60:            src="https://tistory3.daumcdn.net/tistory/941717/skin/images/jquery.min.js"
+61:            type="text/javascript"
+62:        ></script>
+63:        <script
+64:            src="https://tistory3.daumcdn.net/tistory/941717/skin/images/snowfall.jquery.js"
+65:            type="text/javascript"
+66:        ></script>
+67:        <script>
+68:            $(document).ready(function () {
+69:                $(document).snowfall({
+70:                    deviceorientation: true,
+71:                    round: true,
+72:                    minSize: 1,
+73:                    maxSize: 8,
+74:                    flakeCount: 250,
+75:                });
+76:            });
+77:        </script>
+78:        <center>
+79:            <form action="/create" method="post">
+80:                <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden" />
+81:                <input
+82:                    placeholder="제목을 입력해주세요!"
+83:                    class="title"
+84:                    type="text"
+85:                    id="title"
+86:                    name="title"
+87:                />
+88:                <textarea
+89:                    placeholder="내용을 입력해주세요!"
+90:                    class="content"
+91:                    type="text"
+92:                    id="content"
+93:                    name="content"
+94:                ></textarea>
+95:                <audio id="audio" loop autoplay src="/Jingle_Bells.mp3"></audio>
+96:                <script>
+97:                    document.getElementById('audio').play();
+98:                </script>
+99:                <button class="sendbtn">
+100:                    보내기
+101:                </button>
+102:            </form>
+103:        </center>
+104:    <%= #render 'form', post: @post %>
+105:    
+106:    <%= #link_to 'Back', posts_path %>
+  
+app/views/posts/new.html.erb:106: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/posts/new.html.erb:109: unterminated string meets end of file
+app/views/posts/new.html.erb:109: syntax error, unexpected end-of-input, expecting ')'
+app/views/posts/new.html.erb:106: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/posts/new.html.erb:109: unterminated string meets end of file
+app/views/posts/new.html.erb:109: syntax error, unexpected end-of-input, expecting ')'
+app/views/posts/new.html.erb:106: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/posts/new.html.erb:109: unterminated string meets end of file
+app/views/posts/new.html.erb:109: syntax error, unexpected end-of-input, expecting ')'
+app/views/posts/new.html.erb:106: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/posts/new.html.erb:109: unterminated string meets end of file
+app/views/posts/new.html.erb:109: syntax error, unexpected end-of-input, expecting ')'
+app/views/posts/new.html.erb:106: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/posts/new.html.erb:109: unterminated string meets end of file
+app/views/posts/new.html.erb:109: syntax error, unexpected end-of-input, expecting ')'
+app/views/posts/new.html.erb:106: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/posts/new.html.erb:109: unterminated string meets end of file
+app/views/posts/new.html.erb:109: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/posts" for 172.17.0.1 at 2022-12-03 13:06:40 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (38.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:103
+  Rendered posts/index.html.erb within layouts/application (Duration: 40.3ms | Allocations: 652)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 7.6ms | ActiveRecord: 38.8ms | Allocations: 4787)
+
+
+Started GET "/posts" for 172.17.0.1 at 2022-12-03 13:06:54 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:103
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 925)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 28.2ms | ActiveRecord: 0.1ms | Allocations: 5935)
+
+
+Started GET "/posts/new" for 172.17.0.1 at 2022-12-03 13:06:55 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1144)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 1997)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+    <style>
+                * {
+                    box-sizing: border-box;
+                }
+
+                body {
+                    font-family: 'Gamja Flower', cursive;
+                    margin: 0;
+                    background-color: #f45757;
+                }
+
+                input {
+                    font-family: 'Gamja Flower', cursive;
+                    border-radius: 2vw;
+                    width: 70vw;
+                    text-align: center;
+                }
+
+                .title {
+                    height: 5vw;
+                    font-size: 3vw;
+                    margin-top: 10vw;
+                    margin-bottom: 5vw;
+                }
+
+                .content {
+                    height: 70vh;
+                    font-family: 'Gamja Flower', cursive;
+                    border-radius: 2vw;
+                    width: 70vw;
+                    text-align: center;
+                    font-size: 3vw;
+           			resize: none;
+                }
+		
+				body {
+        			-ms-overflow-style: none; /* 인터넷 익스플로러 */
+           			scrollbar-width: none; /* 파이어폭스 */
+        		}
+
+        		body::-webkit-scrollbar {
+            		display: none; /* 크롬, 사파리, 오페라, 엣지 */
+        		}
+
+        		.sendbtn {
+        			background-color: #088A4B;
+        			border: 0px;
+        			color: white;
+        			font-family: 'Gamja Flower', cursive;
+        			width: 70vw;
+        			height: 5vw;
+        			border-radius: 10vw;
+        			font-size: 3vw;
+        			margin-top: 5vw;
+        			margin-bottom: 5vw;
+        		}
+    </style>
+    <script
+        src="https://tistory3.daumcdn.net/tistory/941717/skin/images/jquery.min.js"
+        type="text/javascript"
+    ></script>
+    <script
+        src="https://tistory3.daumcdn.net/tistory/941717/skin/images/snowfall.jquery.js"
+        type="text/javascript"
+    ></script>
+    <script>
+        $(document).ready(function () {
+            $(document).snowfall({
+                deviceorientation: true,
+                round: true,
+                minSize: 1,
+                maxSize: 8,
+                flakeCount: 250,
+            });
+        });
+    </script>
+    <center>
+        <form action="/create" method="post">
+            <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden" />
+            <input
+                placeholder="제목을 입력해주세요!"
+                class="title"
+                type="text"
+                id="title"
+                name="title"
+            />
+            <textarea
+                placeholder="내용을 입력해주세요!"
+                class="content"
+                type="text"
+                id="content"
+                name="content"
+            ></textarea>
+            <audio id="audio" loop autoplay src="/Jingle_Bells.mp3"></audio>
+            <script>
+                document.getElementById('audio').play();
+            </script>
+            <button class="sendbtn">
+                보내기
+            </button>
+        </form>
+    </center>
+<%= #render 'form', post: @post %>
+
+<%= #link_to 'Back', posts_path %>
+
+):
+1:    
+2:        <style>
+3:                    * {
+4:                        box-sizing: border-box;
+5:                    }
+6:    
+7:                    body {
+8:                        font-family: 'Gamja Flower', cursive;
+9:                        margin: 0;
+10:                        background-color: #f45757;
+11:                    }
+12:    
+13:                    input {
+14:                        font-family: 'Gamja Flower', cursive;
+15:                        border-radius: 2vw;
+16:                        width: 70vw;
+17:                        text-align: center;
+18:                    }
+19:    
+20:                    .title {
+21:                        height: 5vw;
+22:                        font-size: 3vw;
+23:                        margin-top: 10vw;
+24:                        margin-bottom: 5vw;
+25:                    }
+26:    
+27:                    .content {
+28:                        height: 70vh;
+29:                        font-family: 'Gamja Flower', cursive;
+30:                        border-radius: 2vw;
+31:                        width: 70vw;
+32:                        text-align: center;
+33:                        font-size: 3vw;
+34:               			resize: none;
+35:                    }
+36:    		
+37:    				body {
+38:            			-ms-overflow-style: none; /* 인터넷 익스플로러 */
+39:               			scrollbar-width: none; /* 파이어폭스 */
+40:            		}
+41:    
+42:            		body::-webkit-scrollbar {
+43:                		display: none; /* 크롬, 사파리, 오페라, 엣지 */
+44:            		}
+45:    
+46:            		.sendbtn {
+47:            			background-color: #088A4B;
+48:            			border: 0px;
+49:            			color: white;
+50:            			font-family: 'Gamja Flower', cursive;
+51:            			width: 70vw;
+52:            			height: 5vw;
+53:            			border-radius: 10vw;
+54:            			font-size: 3vw;
+55:            			margin-top: 5vw;
+56:            			margin-bottom: 5vw;
+57:            		}
+58:        </style>
+59:        <script
+60:            src="https://tistory3.daumcdn.net/tistory/941717/skin/images/jquery.min.js"
+61:            type="text/javascript"
+62:        ></script>
+63:        <script
+64:            src="https://tistory3.daumcdn.net/tistory/941717/skin/images/snowfall.jquery.js"
+65:            type="text/javascript"
+66:        ></script>
+67:        <script>
+68:            $(document).ready(function () {
+69:                $(document).snowfall({
+70:                    deviceorientation: true,
+71:                    round: true,
+72:                    minSize: 1,
+73:                    maxSize: 8,
+74:                    flakeCount: 250,
+75:                });
+76:            });
+77:        </script>
+78:        <center>
+79:            <form action="/create" method="post">
+80:                <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden" />
+81:                <input
+82:                    placeholder="제목을 입력해주세요!"
+83:                    class="title"
+84:                    type="text"
+85:                    id="title"
+86:                    name="title"
+87:                />
+88:                <textarea
+89:                    placeholder="내용을 입력해주세요!"
+90:                    class="content"
+91:                    type="text"
+92:                    id="content"
+93:                    name="content"
+94:                ></textarea>
+95:                <audio id="audio" loop autoplay src="/Jingle_Bells.mp3"></audio>
+96:                <script>
+97:                    document.getElementById('audio').play();
+98:                </script>
+99:                <button class="sendbtn">
+100:                    보내기
+101:                </button>
+102:            </form>
+103:        </center>
+104:    <%= #render 'form', post: @post %>
+105:    
+106:    <%= #link_to 'Back', posts_path %>
+  
+app/views/posts/new.html.erb:106: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/posts/new.html.erb:109: unterminated string meets end of file
+app/views/posts/new.html.erb:109: syntax error, unexpected end-of-input, expecting ')'
+app/views/posts/new.html.erb:106: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/posts/new.html.erb:109: unterminated string meets end of file
+app/views/posts/new.html.erb:109: syntax error, unexpected end-of-input, expecting ')'
+app/views/posts/new.html.erb:106: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/posts/new.html.erb:109: unterminated string meets end of file
+app/views/posts/new.html.erb:109: syntax error, unexpected end-of-input, expecting ')'
+app/views/posts/new.html.erb:106: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/posts/new.html.erb:109: unterminated string meets end of file
+app/views/posts/new.html.erb:109: syntax error, unexpected end-of-input, expecting ')'
+app/views/posts/new.html.erb:106: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/posts/new.html.erb:109: unterminated string meets end of file
+app/views/posts/new.html.erb:109: syntax error, unexpected end-of-input, expecting ')'
+app/views/posts/new.html.erb:106: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/posts/new.html.erb:109: unterminated string meets end of file
+app/views/posts/new.html.erb:109: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/posts" for 172.17.0.1 at 2022-12-03 13:09:04 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:103
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1191)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 9.6ms | ActiveRecord: 0.7ms | Allocations: 5813)
+
+
+Started GET "/posts/new" for 172.17.0.1 at 2022-12-03 13:09:07 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 1130)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.4ms | Allocations: 4934)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+    <style>
+                * {
+                    box-sizing: border-box;
+                }
+
+                body {
+                    font-family: 'Gamja Flower', cursive;
+                    margin: 0;
+                    background-color: #f45757;
+                }
+
+                input {
+                    font-family: 'Gamja Flower', cursive;
+                    border-radius: 2vw;
+                    width: 70vw;
+                    text-align: center;
+                }
+
+                .title {
+                    height: 5vw;
+                    font-size: 3vw;
+                    margin-top: 10vw;
+                    margin-bottom: 5vw;
+                }
+
+                .content {
+                    height: 70vh;
+                    font-family: 'Gamja Flower', cursive;
+                    border-radius: 2vw;
+                    width: 70vw;
+                    text-align: center;
+                    font-size: 3vw;
+           			resize: none;
+                }
+		
+				body {
+        			-ms-overflow-style: none; /* 인터넷 익스플로러 */
+           			scrollbar-width: none; /* 파이어폭스 */
+        		}
+
+        		body::-webkit-scrollbar {
+            		display: none; /* 크롬, 사파리, 오페라, 엣지 */
+        		}
+
+        		.sendbtn {
+        			background-color: #088A4B;
+        			border: 0px;
+        			color: white;
+        			font-family: 'Gamja Flower', cursive;
+        			width: 70vw;
+        			height: 5vw;
+        			border-radius: 10vw;
+        			font-size: 3vw;
+        			margin-top: 5vw;
+        			margin-bottom: 5vw;
+        		}
+    </style>
+    <script
+        src="https://tistory3.daumcdn.net/tistory/941717/skin/images/jquery.min.js"
+        type="text/javascript"
+    ></script>
+    <script
+        src="https://tistory3.daumcdn.net/tistory/941717/skin/images/snowfall.jquery.js"
+        type="text/javascript"
+    ></script>
+    <script>
+        $(document).ready(function () {
+            $(document).snowfall({
+                deviceorientation: true,
+                round: true,
+                minSize: 1,
+                maxSize: 8,
+                flakeCount: 250,
+            });
+        });
+    </script>
+    <center>
+        <form action="/create" method="post">
+            <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden" />
+            <input
+                placeholder="제목을 입력해주세요!"
+                class="title"
+                type="text"
+                id="title"
+                name="title"
+            />
+            <textarea
+                placeholder="내용을 입력해주세요!"
+                class="content"
+                type="text"
+                id="content"
+                name="content"
+            ></textarea>
+            <audio id="audio" loop autoplay src="/Jingle_Bells.mp3"></audio>
+            <script>
+                document.getElementById('audio').play();
+            </script>
+            <button class="sendbtn">
+                보내기
+            </button>
+        </form>
+    </center>
+<%= #render 'form', post: @post %>
+
+<%= #link_to 'Back', posts_path %>
+
+):
+1:    
+2:        <style>
+3:                    * {
+4:                        box-sizing: border-box;
+5:                    }
+6:    
+7:                    body {
+8:                        font-family: 'Gamja Flower', cursive;
+9:                        margin: 0;
+10:                        background-color: #f45757;
+11:                    }
+12:    
+13:                    input {
+14:                        font-family: 'Gamja Flower', cursive;
+15:                        border-radius: 2vw;
+16:                        width: 70vw;
+17:                        text-align: center;
+18:                    }
+19:    
+20:                    .title {
+21:                        height: 5vw;
+22:                        font-size: 3vw;
+23:                        margin-top: 10vw;
+24:                        margin-bottom: 5vw;
+25:                    }
+26:    
+27:                    .content {
+28:                        height: 70vh;
+29:                        font-family: 'Gamja Flower', cursive;
+30:                        border-radius: 2vw;
+31:                        width: 70vw;
+32:                        text-align: center;
+33:                        font-size: 3vw;
+34:               			resize: none;
+35:                    }
+36:    		
+37:    				body {
+38:            			-ms-overflow-style: none; /* 인터넷 익스플로러 */
+39:               			scrollbar-width: none; /* 파이어폭스 */
+40:            		}
+41:    
+42:            		body::-webkit-scrollbar {
+43:                		display: none; /* 크롬, 사파리, 오페라, 엣지 */
+44:            		}
+45:    
+46:            		.sendbtn {
+47:            			background-color: #088A4B;
+48:            			border: 0px;
+49:            			color: white;
+50:            			font-family: 'Gamja Flower', cursive;
+51:            			width: 70vw;
+52:            			height: 5vw;
+53:            			border-radius: 10vw;
+54:            			font-size: 3vw;
+55:            			margin-top: 5vw;
+56:            			margin-bottom: 5vw;
+57:            		}
+58:        </style>
+59:        <script
+60:            src="https://tistory3.daumcdn.net/tistory/941717/skin/images/jquery.min.js"
+61:            type="text/javascript"
+62:        ></script>
+63:        <script
+64:            src="https://tistory3.daumcdn.net/tistory/941717/skin/images/snowfall.jquery.js"
+65:            type="text/javascript"
+66:        ></script>
+67:        <script>
+68:            $(document).ready(function () {
+69:                $(document).snowfall({
+70:                    deviceorientation: true,
+71:                    round: true,
+72:                    minSize: 1,
+73:                    maxSize: 8,
+74:                    flakeCount: 250,
+75:                });
+76:            });
+77:        </script>
+78:        <center>
+79:            <form action="/create" method="post">
+80:                <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden" />
+81:                <input
+82:                    placeholder="제목을 입력해주세요!"
+83:                    class="title"
+84:                    type="text"
+85:                    id="title"
+86:                    name="title"
+87:                />
+88:                <textarea
+89:                    placeholder="내용을 입력해주세요!"
+90:                    class="content"
+91:                    type="text"
+92:                    id="content"
+93:                    name="content"
+94:                ></textarea>
+95:                <audio id="audio" loop autoplay src="/Jingle_Bells.mp3"></audio>
+96:                <script>
+97:                    document.getElementById('audio').play();
+98:                </script>
+99:                <button class="sendbtn">
+100:                    보내기
+101:                </button>
+102:            </form>
+103:        </center>
+104:    <%= #render 'form', post: @post %>
+105:    
+106:    <%= #link_to 'Back', posts_path %>
+  
+app/views/posts/new.html.erb:106: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/posts/new.html.erb:109: unterminated string meets end of file
+app/views/posts/new.html.erb:109: syntax error, unexpected end-of-input, expecting ')'
+app/views/posts/new.html.erb:106: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/posts/new.html.erb:109: unterminated string meets end of file
+app/views/posts/new.html.erb:109: syntax error, unexpected end-of-input, expecting ')'
+app/views/posts/new.html.erb:106: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/posts/new.html.erb:109: unterminated string meets end of file
+app/views/posts/new.html.erb:109: syntax error, unexpected end-of-input, expecting ')'
+app/views/posts/new.html.erb:106: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/posts/new.html.erb:109: unterminated string meets end of file
+app/views/posts/new.html.erb:109: syntax error, unexpected end-of-input, expecting ')'
+app/views/posts/new.html.erb:106: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/posts/new.html.erb:109: unterminated string meets end of file
+app/views/posts/new.html.erb:109: syntax error, unexpected end-of-input, expecting ')'
+app/views/posts/new.html.erb:106: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/posts/new.html.erb:109: unterminated string meets end of file
+app/views/posts/new.html.erb:109: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/posts" for 172.17.0.1 at 2022-12-03 13:09:36 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (79.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:103
+  Rendered posts/index.html.erb within layouts/application (Duration: 81.0ms | Allocations: 643)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 87ms (Views: 6.0ms | ActiveRecord: 79.6ms | Allocations: 4749)
+
+
+Started GET "/create" for 172.17.0.1 at 2022-12-03 13:09:40 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 50.2ms | Allocations: 1125)
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 0.0ms | Allocations: 1842)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+    <style>
+                * {
+                    box-sizing: border-box;
+                }
+
+                body {
+                    font-family: 'Gamja Flower', cursive;
+                    margin: 0;
+                    background-color: #f45757;
+                }
+
+                input {
+                    font-family: 'Gamja Flower', cursive;
+                    border-radius: 2vw;
+                    width: 70vw;
+                    text-align: center;
+                }
+
+                .title {
+                    height: 5vw;
+                    font-size: 3vw;
+                    margin-top: 10vw;
+                    margin-bottom: 5vw;
+                }
+
+                .content {
+                    height: 70vh;
+                    font-family: 'Gamja Flower', cursive;
+                    border-radius: 2vw;
+                    width: 70vw;
+                    text-align: center;
+                    font-size: 3vw;
+           			resize: none;
+                }
+		
+				body {
+        			-ms-overflow-style: none; /* 인터넷 익스플로러 */
+           			scrollbar-width: none; /* 파이어폭스 */
+        		}
+
+        		body::-webkit-scrollbar {
+            		display: none; /* 크롬, 사파리, 오페라, 엣지 */
+        		}
+
+        		.sendbtn {
+        			background-color: #088A4B;
+        			border: 0px;
+        			color: white;
+        			font-family: 'Gamja Flower', cursive;
+        			width: 70vw;
+        			height: 5vw;
+        			border-radius: 10vw;
+        			font-size: 3vw;
+        			margin-top: 5vw;
+        			margin-bottom: 5vw;
+        		}
+    </style>
+    <script
+        src="https://tistory3.daumcdn.net/tistory/941717/skin/images/jquery.min.js"
+        type="text/javascript"
+    ></script>
+    <script
+        src="https://tistory3.daumcdn.net/tistory/941717/skin/images/snowfall.jquery.js"
+        type="text/javascript"
+    ></script>
+    <script>
+        $(document).ready(function () {
+            $(document).snowfall({
+                deviceorientation: true,
+                round: true,
+                minSize: 1,
+                maxSize: 8,
+                flakeCount: 250,
+            });
+        });
+    </script>
+    <center>
+        <form action="/create" method="post">
+            <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden" />
+            <input
+                placeholder="제목을 입력해주세요!"
+                class="title"
+                type="text"
+                id="title"
+                name="title"
+            />
+            <textarea
+                placeholder="내용을 입력해주세요!"
+                class="content"
+                type="text"
+                id="content"
+                name="content"
+            ></textarea>
+            <audio id="audio" loop autoplay src="/Jingle_Bells.mp3"></audio>
+            <script>
+                document.getElementById('audio').play();
+            </script>
+            <button class="sendbtn">
+                보내기
+            </button>
+        </form>
+    </center>
+<%= #render 'form', post: @post %>
+
+<%= #link_to 'Back', posts_path %>
+
+):
+1:    
+2:        <style>
+3:                    * {
+4:                        box-sizing: border-box;
+5:                    }
+6:    
+7:                    body {
+8:                        font-family: 'Gamja Flower', cursive;
+9:                        margin: 0;
+10:                        background-color: #f45757;
+11:                    }
+12:    
+13:                    input {
+14:                        font-family: 'Gamja Flower', cursive;
+15:                        border-radius: 2vw;
+16:                        width: 70vw;
+17:                        text-align: center;
+18:                    }
+19:    
+20:                    .title {
+21:                        height: 5vw;
+22:                        font-size: 3vw;
+23:                        margin-top: 10vw;
+24:                        margin-bottom: 5vw;
+25:                    }
+26:    
+27:                    .content {
+28:                        height: 70vh;
+29:                        font-family: 'Gamja Flower', cursive;
+30:                        border-radius: 2vw;
+31:                        width: 70vw;
+32:                        text-align: center;
+33:                        font-size: 3vw;
+34:               			resize: none;
+35:                    }
+36:    		
+37:    				body {
+38:            			-ms-overflow-style: none; /* 인터넷 익스플로러 */
+39:               			scrollbar-width: none; /* 파이어폭스 */
+40:            		}
+41:    
+42:            		body::-webkit-scrollbar {
+43:                		display: none; /* 크롬, 사파리, 오페라, 엣지 */
+44:            		}
+45:    
+46:            		.sendbtn {
+47:            			background-color: #088A4B;
+48:            			border: 0px;
+49:            			color: white;
+50:            			font-family: 'Gamja Flower', cursive;
+51:            			width: 70vw;
+52:            			height: 5vw;
+53:            			border-radius: 10vw;
+54:            			font-size: 3vw;
+55:            			margin-top: 5vw;
+56:            			margin-bottom: 5vw;
+57:            		}
+58:        </style>
+59:        <script
+60:            src="https://tistory3.daumcdn.net/tistory/941717/skin/images/jquery.min.js"
+61:            type="text/javascript"
+62:        ></script>
+63:        <script
+64:            src="https://tistory3.daumcdn.net/tistory/941717/skin/images/snowfall.jquery.js"
+65:            type="text/javascript"
+66:        ></script>
+67:        <script>
+68:            $(document).ready(function () {
+69:                $(document).snowfall({
+70:                    deviceorientation: true,
+71:                    round: true,
+72:                    minSize: 1,
+73:                    maxSize: 8,
+74:                    flakeCount: 250,
+75:                });
+76:            });
+77:        </script>
+78:        <center>
+79:            <form action="/create" method="post">
+80:                <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden" />
+81:                <input
+82:                    placeholder="제목을 입력해주세요!"
+83:                    class="title"
+84:                    type="text"
+85:                    id="title"
+86:                    name="title"
+87:                />
+88:                <textarea
+89:                    placeholder="내용을 입력해주세요!"
+90:                    class="content"
+91:                    type="text"
+92:                    id="content"
+93:                    name="content"
+94:                ></textarea>
+95:                <audio id="audio" loop autoplay src="/Jingle_Bells.mp3"></audio>
+96:                <script>
+97:                    document.getElementById('audio').play();
+98:                </script>
+99:                <button class="sendbtn">
+100:                    보내기
+101:                </button>
+102:            </form>
+103:        </center>
+104:    <%= #render 'form', post: @post %>
+105:    
+106:    <%= #link_to 'Back', posts_path %>
+  
+app/views/posts/new.html.erb:106: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/posts/new.html.erb:109: unterminated string meets end of file
+app/views/posts/new.html.erb:109: syntax error, unexpected end-of-input, expecting ')'
+app/views/posts/new.html.erb:106: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/posts/new.html.erb:109: unterminated string meets end of file
+app/views/posts/new.html.erb:109: syntax error, unexpected end-of-input, expecting ')'
+app/views/posts/new.html.erb:106: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/posts/new.html.erb:109: unterminated string meets end of file
+app/views/posts/new.html.erb:109: syntax error, unexpected end-of-input, expecting ')'
+app/views/posts/new.html.erb:106: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/posts/new.html.erb:109: unterminated string meets end of file
+app/views/posts/new.html.erb:109: syntax error, unexpected end-of-input, expecting ')'
+app/views/posts/new.html.erb:106: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/posts/new.html.erb:109: unterminated string meets end of file
+app/views/posts/new.html.erb:109: syntax error, unexpected end-of-input, expecting ')'
+app/views/posts/new.html.erb:106: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/posts/new.html.erb:109: unterminated string meets end of file
+app/views/posts/new.html.erb:109: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/create" for 172.17.0.1 at 2022-12-03 13:10:15 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 90.7ms | Allocations: 1138)
+Completed 500 Internal Server Error in 94ms (ActiveRecord: 0.0ms | Allocations: 2597)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+    <style>
+                * {
+                    box-sizing: border-box;
+                }
+
+                body {
+                    font-family: 'Gamja Flower', cursive;
+                    margin: 0;
+                    background-color: #f45757;
+                }
+
+                input {
+                    font-family: 'Gamja Flower', cursive;
+                    border-radius: 2vw;
+                    width: 70vw;
+                    text-align: center;
+                }
+
+                .title {
+                    height: 5vw;
+                    font-size: 3vw;
+                    margin-top: 10vw;
+                    margin-bottom: 5vw;
+                }
+
+                .content {
+                    height: 70vh;
+                    font-family: 'Gamja Flower', cursive;
+                    border-radius: 2vw;
+                    width: 70vw;
+                    text-align: center;
+                    font-size: 3vw;
+           			resize: none;
+                }
+		
+				body {
+        			-ms-overflow-style: none; /* 인터넷 익스플로러 */
+           			scrollbar-width: none; /* 파이어폭스 */
+        		}
+
+        		body::-webkit-scrollbar {
+            		display: none; /* 크롬, 사파리, 오페라, 엣지 */
+        		}
+
+        		.sendbtn {
+        			background-color: #088A4B;
+        			border: 0px;
+        			color: white;
+        			font-family: 'Gamja Flower', cursive;
+        			width: 70vw;
+        			height: 5vw;
+        			border-radius: 10vw;
+        			font-size: 3vw;
+        			margin-top: 5vw;
+        			margin-bottom: 5vw;
+        		}
+    </style>
+    <script
+        src="https://tistory3.daumcdn.net/tistory/941717/skin/images/jquery.min.js"
+        type="text/javascript"
+    ></script>
+    <script
+        src="https://tistory3.daumcdn.net/tistory/941717/skin/images/snowfall.jquery.js"
+        type="text/javascript"
+    ></script>
+    <script>
+        $(document).ready(function () {
+            $(document).snowfall({
+                deviceorientation: true,
+                round: true,
+                minSize: 1,
+                maxSize: 8,
+                flakeCount: 250,
+            });
+        });
+    </script>
+    <center>
+        <form action="/create" method="post">
+            <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden" />
+            <input
+                placeholder="제목을 입력해주세요!"
+                class="title"
+                type="text"
+                id="title"
+                name="title"
+            />
+            <textarea
+                placeholder="내용을 입력해주세요!"
+                class="content"
+                type="text"
+                id="content"
+                name="content"
+            ></textarea>
+            <audio id="audio" loop autoplay src="/Jingle_Bells.mp3"></audio>
+            <script>
+                document.getElementById('audio').play();
+            </script>
+            <button class="sendbtn">
+                보내기
+            </button>
+        </form>
+    </center>
+<%= #render 'form', post: @post %>
+
+<%= #link_to 'Back', posts_path %>
+
+):
+1:    
+2:        <style>
+3:                    * {
+4:                        box-sizing: border-box;
+5:                    }
+6:    
+7:                    body {
+8:                        font-family: 'Gamja Flower', cursive;
+9:                        margin: 0;
+10:                        background-color: #f45757;
+11:                    }
+12:    
+13:                    input {
+14:                        font-family: 'Gamja Flower', cursive;
+15:                        border-radius: 2vw;
+16:                        width: 70vw;
+17:                        text-align: center;
+18:                    }
+19:    
+20:                    .title {
+21:                        height: 5vw;
+22:                        font-size: 3vw;
+23:                        margin-top: 10vw;
+24:                        margin-bottom: 5vw;
+25:                    }
+26:    
+27:                    .content {
+28:                        height: 70vh;
+29:                        font-family: 'Gamja Flower', cursive;
+30:                        border-radius: 2vw;
+31:                        width: 70vw;
+32:                        text-align: center;
+33:                        font-size: 3vw;
+34:               			resize: none;
+35:                    }
+36:    		
+37:    				body {
+38:            			-ms-overflow-style: none; /* 인터넷 익스플로러 */
+39:               			scrollbar-width: none; /* 파이어폭스 */
+40:            		}
+41:    
+42:            		body::-webkit-scrollbar {
+43:                		display: none; /* 크롬, 사파리, 오페라, 엣지 */
+44:            		}
+45:    
+46:            		.sendbtn {
+47:            			background-color: #088A4B;
+48:            			border: 0px;
+49:            			color: white;
+50:            			font-family: 'Gamja Flower', cursive;
+51:            			width: 70vw;
+52:            			height: 5vw;
+53:            			border-radius: 10vw;
+54:            			font-size: 3vw;
+55:            			margin-top: 5vw;
+56:            			margin-bottom: 5vw;
+57:            		}
+58:        </style>
+59:        <script
+60:            src="https://tistory3.daumcdn.net/tistory/941717/skin/images/jquery.min.js"
+61:            type="text/javascript"
+62:        ></script>
+63:        <script
+64:            src="https://tistory3.daumcdn.net/tistory/941717/skin/images/snowfall.jquery.js"
+65:            type="text/javascript"
+66:        ></script>
+67:        <script>
+68:            $(document).ready(function () {
+69:                $(document).snowfall({
+70:                    deviceorientation: true,
+71:                    round: true,
+72:                    minSize: 1,
+73:                    maxSize: 8,
+74:                    flakeCount: 250,
+75:                });
+76:            });
+77:        </script>
+78:        <center>
+79:            <form action="/create" method="post">
+80:                <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden" />
+81:                <input
+82:                    placeholder="제목을 입력해주세요!"
+83:                    class="title"
+84:                    type="text"
+85:                    id="title"
+86:                    name="title"
+87:                />
+88:                <textarea
+89:                    placeholder="내용을 입력해주세요!"
+90:                    class="content"
+91:                    type="text"
+92:                    id="content"
+93:                    name="content"
+94:                ></textarea>
+95:                <audio id="audio" loop autoplay src="/Jingle_Bells.mp3"></audio>
+96:                <script>
+97:                    document.getElementById('audio').play();
+98:                </script>
+99:                <button class="sendbtn">
+100:                    보내기
+101:                </button>
+102:            </form>
+103:        </center>
+104:    <%= #render 'form', post: @post %>
+105:    
+106:    <%= #link_to 'Back', posts_path %>
+  
+app/views/posts/new.html.erb:106: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/posts/new.html.erb:109: unterminated string meets end of file
+app/views/posts/new.html.erb:109: syntax error, unexpected end-of-input, expecting ')'
+app/views/posts/new.html.erb:106: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/posts/new.html.erb:109: unterminated string meets end of file
+app/views/posts/new.html.erb:109: syntax error, unexpected end-of-input, expecting ')'
+app/views/posts/new.html.erb:106: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/posts/new.html.erb:109: unterminated string meets end of file
+app/views/posts/new.html.erb:109: syntax error, unexpected end-of-input, expecting ')'
+app/views/posts/new.html.erb:106: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/posts/new.html.erb:109: unterminated string meets end of file
+app/views/posts/new.html.erb:109: syntax error, unexpected end-of-input, expecting ')'
+app/views/posts/new.html.erb:106: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/posts/new.html.erb:109: unterminated string meets end of file
+app/views/posts/new.html.erb:109: syntax error, unexpected end-of-input, expecting ')'
+app/views/posts/new.html.erb:106: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/posts/new.html.erb:109: unterminated string meets end of file
+app/views/posts/new.html.erb:109: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/posts" for 172.17.0.1 at 2022-12-03 13:13:28 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:103
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 907)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 96ms (Views: 6.5ms | ActiveRecord: 0.1ms | Allocations: 5334)
+
+
+Started GET "/posts" for 172.17.0.1 at 2022-12-03 13:13:55 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:103
+  Rendered posts/index.html.erb within layouts/application (Duration: 35.5ms | Allocations: 909)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 42.1ms | ActiveRecord: 0.2ms | Allocations: 5936)
+
+
+Started GET "/posts" for 172.17.0.1 at 2022-12-03 13:15:26 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:103
+  Rendered posts/index.html.erb within layouts/application (Duration: 46.5ms | Allocations: 861)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 56ms (Views: 54.1ms | ActiveRecord: 0.2ms | Allocations: 5867)
+
+
+Started GET "/posts/new" for 172.17.0.1 at 2022-12-03 13:15:30 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1143)
+Completed 500 Internal Server Error in 106ms (ActiveRecord: 0.0ms | Allocations: 1988)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+    <style>
+                * {
+                    box-sizing: border-box;
+                }
+
+                body {
+                    font-family: 'Gamja Flower', cursive;
+                    margin: 0;
+                    background-color: #f45757;
+                }
+
+                input {
+                    font-family: 'Gamja Flower', cursive;
+                    border-radius: 2vw;
+                    width: 70vw;
+                    text-align: center;
+                }
+
+                .title {
+                    height: 5vw;
+                    font-size: 3vw;
+                    margin-top: 10vw;
+                    margin-bottom: 5vw;
+                }
+
+                .content {
+                    height: 70vh;
+                    font-family: 'Gamja Flower', cursive;
+                    border-radius: 2vw;
+                    width: 70vw;
+                    text-align: center;
+                    font-size: 3vw;
+           			resize: none;
+                }
+		
+				body {
+        			-ms-overflow-style: none; /* 인터넷 익스플로러 */
+           			scrollbar-width: none; /* 파이어폭스 */
+        		}
+
+        		body::-webkit-scrollbar {
+            		display: none; /* 크롬, 사파리, 오페라, 엣지 */
+        		}
+
+        		.sendbtn {
+        			background-color: #088A4B;
+        			border: 0px;
+        			color: white;
+        			font-family: 'Gamja Flower', cursive;
+        			width: 70vw;
+        			height: 5vw;
+        			border-radius: 10vw;
+        			font-size: 3vw;
+        			margin-top: 5vw;
+        			margin-bottom: 5vw;
+        		}
+    </style>
+    <script
+        src="https://tistory3.daumcdn.net/tistory/941717/skin/images/jquery.min.js"
+        type="text/javascript"
+    ></script>
+    <script
+        src="https://tistory3.daumcdn.net/tistory/941717/skin/images/snowfall.jquery.js"
+        type="text/javascript"
+    ></script>
+    <script>
+        $(document).ready(function () {
+            $(document).snowfall({
+                deviceorientation: true,
+                round: true,
+                minSize: 1,
+                maxSize: 8,
+                flakeCount: 250,
+            });
+        });
+    </script>
+    <center>
+        <form action="/create" method="post">
+            <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden" />
+            <input
+                placeholder="제목을 입력해주세요!"
+                class="title"
+                type="text"
+                id="title"
+                name="title"
+            />
+            <textarea
+                placeholder="내용을 입력해주세요!"
+                class="content"
+                type="text"
+                id="content"
+                name="content"
+            ></textarea>
+            <audio id="audio" loop autoplay src="/Jingle_Bells.mp3"></audio>
+            <script>
+                document.getElementById('audio').play();
+            </script>
+            <button class="sendbtn">
+                보내기
+            </button>
+        </form>
+    </center>
+<%= #render 'form', post: @post %>
+
+<%= #link_to 'Back', posts_path %>
+
+):
+1:    
+2:        <style>
+3:                    * {
+4:                        box-sizing: border-box;
+5:                    }
+6:    
+7:                    body {
+8:                        font-family: 'Gamja Flower', cursive;
+9:                        margin: 0;
+10:                        background-color: #f45757;
+11:                    }
+12:    
+13:                    input {
+14:                        font-family: 'Gamja Flower', cursive;
+15:                        border-radius: 2vw;
+16:                        width: 70vw;
+17:                        text-align: center;
+18:                    }
+19:    
+20:                    .title {
+21:                        height: 5vw;
+22:                        font-size: 3vw;
+23:                        margin-top: 10vw;
+24:                        margin-bottom: 5vw;
+25:                    }
+26:    
+27:                    .content {
+28:                        height: 70vh;
+29:                        font-family: 'Gamja Flower', cursive;
+30:                        border-radius: 2vw;
+31:                        width: 70vw;
+32:                        text-align: center;
+33:                        font-size: 3vw;
+34:               			resize: none;
+35:                    }
+36:    		
+37:    				body {
+38:            			-ms-overflow-style: none; /* 인터넷 익스플로러 */
+39:               			scrollbar-width: none; /* 파이어폭스 */
+40:            		}
+41:    
+42:            		body::-webkit-scrollbar {
+43:                		display: none; /* 크롬, 사파리, 오페라, 엣지 */
+44:            		}
+45:    
+46:            		.sendbtn {
+47:            			background-color: #088A4B;
+48:            			border: 0px;
+49:            			color: white;
+50:            			font-family: 'Gamja Flower', cursive;
+51:            			width: 70vw;
+52:            			height: 5vw;
+53:            			border-radius: 10vw;
+54:            			font-size: 3vw;
+55:            			margin-top: 5vw;
+56:            			margin-bottom: 5vw;
+57:            		}
+58:        </style>
+59:        <script
+60:            src="https://tistory3.daumcdn.net/tistory/941717/skin/images/jquery.min.js"
+61:            type="text/javascript"
+62:        ></script>
+63:        <script
+64:            src="https://tistory3.daumcdn.net/tistory/941717/skin/images/snowfall.jquery.js"
+65:            type="text/javascript"
+66:        ></script>
+67:        <script>
+68:            $(document).ready(function () {
+69:                $(document).snowfall({
+70:                    deviceorientation: true,
+71:                    round: true,
+72:                    minSize: 1,
+73:                    maxSize: 8,
+74:                    flakeCount: 250,
+75:                });
+76:            });
+77:        </script>
+78:        <center>
+79:            <form action="/create" method="post">
+80:                <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden" />
+81:                <input
+82:                    placeholder="제목을 입력해주세요!"
+83:                    class="title"
+84:                    type="text"
+85:                    id="title"
+86:                    name="title"
+87:                />
+88:                <textarea
+89:                    placeholder="내용을 입력해주세요!"
+90:                    class="content"
+91:                    type="text"
+92:                    id="content"
+93:                    name="content"
+94:                ></textarea>
+95:                <audio id="audio" loop autoplay src="/Jingle_Bells.mp3"></audio>
+96:                <script>
+97:                    document.getElementById('audio').play();
+98:                </script>
+99:                <button class="sendbtn">
+100:                    보내기
+101:                </button>
+102:            </form>
+103:        </center>
+104:    <%= #render 'form', post: @post %>
+105:    
+106:    <%= #link_to 'Back', posts_path %>
+  
+app/views/posts/new.html.erb:106: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/posts/new.html.erb:109: unterminated string meets end of file
+app/views/posts/new.html.erb:109: syntax error, unexpected end-of-input, expecting ')'
+app/views/posts/new.html.erb:106: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/posts/new.html.erb:109: unterminated string meets end of file
+app/views/posts/new.html.erb:109: syntax error, unexpected end-of-input, expecting ')'
+app/views/posts/new.html.erb:106: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/posts/new.html.erb:109: unterminated string meets end of file
+app/views/posts/new.html.erb:109: syntax error, unexpected end-of-input, expecting ')'
+app/views/posts/new.html.erb:106: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/posts/new.html.erb:109: unterminated string meets end of file
+app/views/posts/new.html.erb:109: syntax error, unexpected end-of-input, expecting ')'
+app/views/posts/new.html.erb:106: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/posts/new.html.erb:109: unterminated string meets end of file
+app/views/posts/new.html.erb:109: syntax error, unexpected end-of-input, expecting ')'
+app/views/posts/new.html.erb:106: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/posts/new.html.erb:109: unterminated string meets end of file
+app/views/posts/new.html.erb:109: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/posts" for 172.17.0.1 at 2022-12-03 13:15:54 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:116
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 875)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.1ms | Allocations: 5899)
+
+
+Started GET "/posts" for 172.17.0.1 at 2022-12-03 13:15:56 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:116
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 609)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 38.8ms | ActiveRecord: 0.2ms | Allocations: 4704)
+
+
+Started GET "/posts" for 172.17.0.1 at 2022-12-03 13:16:25 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:118
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 878)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 8.9ms | ActiveRecord: 0.1ms | Allocations: 5885)
+
+
+Started GET "/posts" for 172.17.0.1 at 2022-12-03 13:17:00 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (42.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:122
+  Rendered posts/index.html.erb within layouts/application (Duration: 44.1ms | Allocations: 882)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 52ms (Views: 8.4ms | ActiveRecord: 42.3ms | Allocations: 5886)
+
+
+Started GET "/posts" for 172.17.0.1 at 2022-12-03 13:17:48 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (80.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:137
+  Rendered posts/index.html.erb within layouts/application (Duration: 82.0ms | Allocations: 899)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 90ms (Views: 8.5ms | ActiveRecord: 80.3ms | Allocations: 5907)
+
+
+Started GET "/posts" for 172.17.0.1 at 2022-12-03 13:18:36 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (51.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:137
+  Rendered posts/index.html.erb within layouts/application (Duration: 53.2ms | Allocations: 609)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 60ms (Views: 7.2ms | ActiveRecord: 51.8ms | Allocations: 4707)
+
+
+Started GET "/posts" for 172.17.0.1 at 2022-12-03 13:19:07 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (21.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:137
+  Rendered posts/index.html.erb within layouts/application (Duration: 23.3ms | Allocations: 609)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 7.1ms | ActiveRecord: 21.9ms | Allocations: 4700)
+
+
+Started GET "/posts" for 172.17.0.1 at 2022-12-03 13:19:08 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:137
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 609)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 103ms (Views: 5.0ms | ActiveRecord: 0.1ms | Allocations: 4698)
+
+
+Started GET "/posts" for 172.17.0.1 at 2022-12-03 13:19:09 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:137
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 609)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.2ms | Allocations: 4697)
+
+
+Started GET "/posts" for 172.17.0.1 at 2022-12-03 13:19:09 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (35.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:137
+  Rendered posts/index.html.erb within layouts/application (Duration: 37.1ms | Allocations: 609)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 7.2ms | ActiveRecord: 35.8ms | Allocations: 4710)
+
+
+Started GET "/posts" for 172.17.0.1 at 2022-12-03 13:19:09 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:137
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 609)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.1ms | Allocations: 4702)
+
+
+Started GET "/posts" for 172.17.0.1 at 2022-12-03 13:19:09 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:137
+  Rendered posts/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 609)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.1ms | Allocations: 4706)
+
+
+Started GET "/posts" for 172.17.0.1 at 2022-12-03 13:19:09 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (18.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:137
+  Rendered posts/index.html.erb within layouts/application (Duration: 19.9ms | Allocations: 609)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 5.2ms | ActiveRecord: 18.7ms | Allocations: 4692)
+
+
+Started GET "/posts" for 172.17.0.1 at 2022-12-03 13:19:10 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:137
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 609)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.1ms | Allocations: 4694)
+
+
+Started GET "/posts" for 172.17.0.1 at 2022-12-03 13:19:10 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (56.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:137
+  Rendered posts/index.html.erb within layouts/application (Duration: 57.5ms | Allocations: 609)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 62ms (Views: 5.2ms | ActiveRecord: 56.4ms | Allocations: 4710)
+
+
+Started GET "/posts" for 172.17.0.1 at 2022-12-03 13:19:10 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:137
+  Rendered posts/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 609)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.1ms | Allocations: 4706)
+
+
+Started GET "/posts" for 172.17.0.1 at 2022-12-03 13:19:10 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:137
+  Rendered posts/index.html.erb within layouts/application (Duration: 84.3ms | Allocations: 609)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 95ms (Views: 93.8ms | ActiveRecord: 0.2ms | Allocations: 4692)
+
+
+Started GET "/posts/new" for 172.17.0.1 at 2022-12-03 13:19:11 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 60.5ms | Allocations: 1143)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 0.0ms | Allocations: 1978)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+    <style>
+                * {
+                    box-sizing: border-box;
+                }
+
+                body {
+                    font-family: 'Gamja Flower', cursive;
+                    margin: 0;
+                    background-color: #f45757;
+                }
+
+                input {
+                    font-family: 'Gamja Flower', cursive;
+                    border-radius: 2vw;
+                    width: 70vw;
+                    text-align: center;
+                }
+
+                .title {
+                    height: 5vw;
+                    font-size: 3vw;
+                    margin-top: 10vw;
+                    margin-bottom: 5vw;
+                }
+
+                .content {
+                    height: 70vh;
+                    font-family: 'Gamja Flower', cursive;
+                    border-radius: 2vw;
+                    width: 70vw;
+                    text-align: center;
+                    font-size: 3vw;
+           			resize: none;
+                }
+		
+				body {
+        			-ms-overflow-style: none; /* 인터넷 익스플로러 */
+           			scrollbar-width: none; /* 파이어폭스 */
+        		}
+
+        		body::-webkit-scrollbar {
+            		display: none; /* 크롬, 사파리, 오페라, 엣지 */
+        		}
+
+        		.sendbtn {
+        			background-color: #088A4B;
+        			border: 0px;
+        			color: white;
+        			font-family: 'Gamja Flower', cursive;
+        			width: 70vw;
+        			height: 5vw;
+        			border-radius: 10vw;
+        			font-size: 3vw;
+        			margin-top: 5vw;
+        			margin-bottom: 5vw;
+        		}
+    </style>
+    <script
+        src="https://tistory3.daumcdn.net/tistory/941717/skin/images/jquery.min.js"
+        type="text/javascript"
+    ></script>
+    <script
+        src="https://tistory3.daumcdn.net/tistory/941717/skin/images/snowfall.jquery.js"
+        type="text/javascript"
+    ></script>
+    <script>
+        $(document).ready(function () {
+            $(document).snowfall({
+                deviceorientation: true,
+                round: true,
+                minSize: 1,
+                maxSize: 8,
+                flakeCount: 250,
+            });
+        });
+    </script>
+    <center>
+        <form action="/create" method="post">
+            <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden" />
+            <input
+                placeholder="제목을 입력해주세요!"
+                class="title"
+                type="text"
+                id="title"
+                name="title"
+            />
+            <textarea
+                placeholder="내용을 입력해주세요!"
+                class="content"
+                type="text"
+                id="content"
+                name="content"
+            ></textarea>
+            <audio id="audio" loop autoplay src="/Jingle_Bells.mp3"></audio>
+            <script>
+                document.getElementById('audio').play();
+            </script>
+            <button class="sendbtn">
+                보내기
+            </button>
+        </form>
+    </center>
+<%= #render 'form', post: @post %>
+
+<%= #link_to 'Back', posts_path %>
+
+):
+1:    
+2:        <style>
+3:                    * {
+4:                        box-sizing: border-box;
+5:                    }
+6:    
+7:                    body {
+8:                        font-family: 'Gamja Flower', cursive;
+9:                        margin: 0;
+10:                        background-color: #f45757;
+11:                    }
+12:    
+13:                    input {
+14:                        font-family: 'Gamja Flower', cursive;
+15:                        border-radius: 2vw;
+16:                        width: 70vw;
+17:                        text-align: center;
+18:                    }
+19:    
+20:                    .title {
+21:                        height: 5vw;
+22:                        font-size: 3vw;
+23:                        margin-top: 10vw;
+24:                        margin-bottom: 5vw;
+25:                    }
+26:    
+27:                    .content {
+28:                        height: 70vh;
+29:                        font-family: 'Gamja Flower', cursive;
+30:                        border-radius: 2vw;
+31:                        width: 70vw;
+32:                        text-align: center;
+33:                        font-size: 3vw;
+34:               			resize: none;
+35:                    }
+36:    		
+37:    				body {
+38:            			-ms-overflow-style: none; /* 인터넷 익스플로러 */
+39:               			scrollbar-width: none; /* 파이어폭스 */
+40:            		}
+41:    
+42:            		body::-webkit-scrollbar {
+43:                		display: none; /* 크롬, 사파리, 오페라, 엣지 */
+44:            		}
+45:    
+46:            		.sendbtn {
+47:            			background-color: #088A4B;
+48:            			border: 0px;
+49:            			color: white;
+50:            			font-family: 'Gamja Flower', cursive;
+51:            			width: 70vw;
+52:            			height: 5vw;
+53:            			border-radius: 10vw;
+54:            			font-size: 3vw;
+55:            			margin-top: 5vw;
+56:            			margin-bottom: 5vw;
+57:            		}
+58:        </style>
+59:        <script
+60:            src="https://tistory3.daumcdn.net/tistory/941717/skin/images/jquery.min.js"
+61:            type="text/javascript"
+62:        ></script>
+63:        <script
+64:            src="https://tistory3.daumcdn.net/tistory/941717/skin/images/snowfall.jquery.js"
+65:            type="text/javascript"
+66:        ></script>
+67:        <script>
+68:            $(document).ready(function () {
+69:                $(document).snowfall({
+70:                    deviceorientation: true,
+71:                    round: true,
+72:                    minSize: 1,
+73:                    maxSize: 8,
+74:                    flakeCount: 250,
+75:                });
+76:            });
+77:        </script>
+78:        <center>
+79:            <form action="/create" method="post">
+80:                <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden" />
+81:                <input
+82:                    placeholder="제목을 입력해주세요!"
+83:                    class="title"
+84:                    type="text"
+85:                    id="title"
+86:                    name="title"
+87:                />
+88:                <textarea
+89:                    placeholder="내용을 입력해주세요!"
+90:                    class="content"
+91:                    type="text"
+92:                    id="content"
+93:                    name="content"
+94:                ></textarea>
+95:                <audio id="audio" loop autoplay src="/Jingle_Bells.mp3"></audio>
+96:                <script>
+97:                    document.getElementById('audio').play();
+98:                </script>
+99:                <button class="sendbtn">
+100:                    보내기
+101:                </button>
+102:            </form>
+103:        </center>
+104:    <%= #render 'form', post: @post %>
+105:    
+106:    <%= #link_to 'Back', posts_path %>
+  
+app/views/posts/new.html.erb:106: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/posts/new.html.erb:109: unterminated string meets end of file
+app/views/posts/new.html.erb:109: syntax error, unexpected end-of-input, expecting ')'
+app/views/posts/new.html.erb:106: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/posts/new.html.erb:109: unterminated string meets end of file
+app/views/posts/new.html.erb:109: syntax error, unexpected end-of-input, expecting ')'
+app/views/posts/new.html.erb:106: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/posts/new.html.erb:109: unterminated string meets end of file
+app/views/posts/new.html.erb:109: syntax error, unexpected end-of-input, expecting ')'
+app/views/posts/new.html.erb:106: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/posts/new.html.erb:109: unterminated string meets end of file
+app/views/posts/new.html.erb:109: syntax error, unexpected end-of-input, expecting ')'
+app/views/posts/new.html.erb:106: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/posts/new.html.erb:109: unterminated string meets end of file
+app/views/posts/new.html.erb:109: syntax error, unexpected end-of-input, expecting ')'
+app/views/posts/new.html.erb:106: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/posts/new.html.erb:109: unterminated string meets end of file
+app/views/posts/new.html.erb:109: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/posts" for 172.17.0.1 at 2022-12-03 13:20:50 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:137
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 897)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.2ms | Allocations: 5921)
+
+
+Started GET "/posts" for 172.17.0.1 at 2022-12-03 13:21:07 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (5.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:137
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 898)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 7.4ms | ActiveRecord: 5.3ms | Allocations: 5908)
+
+
+Started GET "/posts/new" for 172.17.0.1 at 2022-12-03 13:21:08 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 0.7ms | Allocations: 160)
+  Rendered posts/new.html.erb within layouts/application (Duration: 22.4ms | Allocations: 605)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 30.9ms | ActiveRecord: 0.0ms | Allocations: 4833)
+
+
+Started GET "/Jingle_Bells.mp3" for 172.17.0.1 at 2022-12-03 13:21:08 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/Jingle_Bells.mp3"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.3) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.3) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/posts/new" for 172.17.0.1 at 2022-12-03 13:23:41 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 58.7ms | Allocations: 156)
+  Rendered posts/new.html.erb within layouts/application (Duration: 59.8ms | Allocations: 607)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 68ms (Views: 67.2ms | ActiveRecord: 0.0ms | Allocations: 5625)
+
+
+Started GET "/Jingle_Bells.mp3" for 172.17.0.1 at 2022-12-03 13:23:41 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/Jingle_Bells.mp3"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.3) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.3) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/posts/new" for 172.17.0.1 at 2022-12-03 13:24:06 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 84.8ms | Allocations: 157)
+  Rendered posts/new.html.erb within layouts/application (Duration: 86.0ms | Allocations: 558)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 107ms (Views: 105.7ms | ActiveRecord: 0.0ms | Allocations: 5577)
+
+
+Started GET "/Jingle_Bells.mp3" for 172.17.0.1 at 2022-12-03 13:24:07 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/Jingle_Bells.mp3"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.3) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.3) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/posts/new" for 172.17.0.1 at 2022-12-03 13:25:04 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 13.8ms | Allocations: 24)
+  Rendered posts/new.html.erb within layouts/application (Duration: 14.1ms | Allocations: 95)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.0ms | Allocations: 4182)
+
+
+Started GET "/Jingle_Bells.mp3" for 172.17.0.1 at 2022-12-03 13:25:05 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/Jingle_Bells.mp3"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.3) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.3) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/posts/new" for 172.17.0.1 at 2022-12-03 13:25:09 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 66.8ms | Allocations: 24)
+  Rendered posts/new.html.erb within layouts/application (Duration: 67.1ms | Allocations: 95)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 73ms (Views: 72.6ms | ActiveRecord: 0.0ms | Allocations: 4131)
+
+
+Started GET "/Jingle_Bells.mp3" for 172.17.0.1 at 2022-12-03 13:25:10 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/Jingle_Bells.mp3"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.3) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.3) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/posts/new" for 172.17.0.1 at 2022-12-03 13:25:21 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 3.7ms | Allocations: 24)
+  Rendered posts/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 95)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 4145)
+
+
+Started GET "/Jingle_Bells.mp3" for 172.17.0.1 at 2022-12-03 13:25:21 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/Jingle_Bells.mp3"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.3) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.3) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/posts/new" for 172.17.0.1 at 2022-12-03 13:26:21 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 31.7ms | Allocations: 24)
+  Rendered posts/new.html.erb within layouts/application (Duration: 32.1ms | Allocations: 96)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 37.2ms | ActiveRecord: 0.0ms | Allocations: 4145)
+
+
+Started POST "/create" for 172.17.0.1 at 2022-12-03 13:26:55 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [POST] "/create"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.3) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.3) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/posts/new" for 172.17.0.1 at 2022-12-03 13:29:01 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 1.7ms | Allocations: 156)
+  Rendered posts/new.html.erb within layouts/application (Duration: 1591.2ms | Allocations: 148217)
+Completed 500 Internal Server Error in 1596ms (ActiveRecord: 0.0ms | Allocations: 149600)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `form' for #<#<Class:0x00007fdc30341bb0>:0x00007fdc3036f998>
+Did you mean?  for
+               fork):
+    85:     </script>
+    86: <%= render 'form', post: @post %>
+    87: 
+    88:     <%= form.submit %>
+  
+app/views/posts/new.html.erb:88
+Started GET "/posts/new" for 172.17.0.1 at 2022-12-03 13:29:47 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 79.8ms | Allocations: 155)
+  Rendered posts/new.html.erb within layouts/application (Duration: 80.5ms | Allocations: 556)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 87ms (Views: 85.7ms | ActiveRecord: 0.0ms | Allocations: 5573)
+
+
+Started POST "/create" for 172.17.0.1 at 2022-12-03 13:30:05 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [POST] "/create"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.3) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.3) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/create" for 172.17.0.1 at 2022-12-03 13:30:36 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PostsController#new as HTML
+  Parameters: {"authenticity_token"=>"IDieGHrA0xAW2pPsHijmH1JsnjuNqrtZ1U2IhyasyTskwiyt85zwRTRXStXmsa0NQIrT59MKx12SRDF8ZwjshQ==", "title"=>"메리 크리스마스!", "content"=>"메리 크리스마스!\r\nMerry Christmas!\r\n\r\n테스트!"}
+HTTP Origin header (https://christmas-xvqwc.run.goorm.io) didn't match request.base_url (http://christmas-xvqwc.run.goorm.io)
+Completed 422 Unprocessable Entity in 75ms (ActiveRecord: 0.0ms | Allocations: 441)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.0.3.2) lib/action_controller/metal/request_forgery_protection.rb:215:in `handle_unverified_request'
+actionpack (6.0.3.2) lib/action_controller/metal/request_forgery_protection.rb:247:in `handle_unverified_request'
+actionpack (6.0.3.2) lib/action_controller/metal/request_forgery_protection.rb:242:in `verify_authenticity_token'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:428:in `block in make_lambda'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:200:in `block (2 levels) in halting'
+actionpack (6.0.3.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:201:in `block in halting'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:513:in `each'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:134:in `run_callbacks'
+actionpack (6.0.3.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.3.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.3.2) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.3.2) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.3.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.3.2) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.3.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.3.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.3.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.2) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.3.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.3) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.3) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/create" for 172.17.0.1 at 2022-12-03 13:30:42 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/create"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.3) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.3) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for 172.17.0.1 at 2022-12-03 13:30:53 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.5ms | Allocations: 189)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 1215)
+
+
+Started GET "/posts" for 172.17.0.1 at 2022-12-03 13:31:01 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:137
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1437)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 10.1ms | ActiveRecord: 0.6ms | Allocations: 6784)
+
+
+Started GET "/posts/new" for 172.17.0.1 at 2022-12-03 13:31:04 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 0.6ms | Allocations: 153)
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 554)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 7.7ms | ActiveRecord: 0.7ms | Allocations: 7879)
+
+
+Started POST "/create" for 172.17.0.1 at 2022-12-03 13:31:30 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#new as HTML
+  Parameters: {"authenticity_token"=>"mY8H0Z6kjOz+wPtcMA2XXjQOsHieE3Ig+G+zczZ5p8KddbVkF/ivudxNImXIlNxMJuj9pMCzDiS/ZgqId92CfA==", "title"=>"Merry Christmas!", "content"=>"테스트 문자"}
+HTTP Origin header (https://christmas-xvqwc.run.goorm.io) didn't match request.base_url (http://christmas-xvqwc.run.goorm.io)
+Completed 422 Unprocessable Entity in 13ms (ActiveRecord: 0.0ms | Allocations: 414)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.0.3.2) lib/action_controller/metal/request_forgery_protection.rb:215:in `handle_unverified_request'
+actionpack (6.0.3.2) lib/action_controller/metal/request_forgery_protection.rb:247:in `handle_unverified_request'
+actionpack (6.0.3.2) lib/action_controller/metal/request_forgery_protection.rb:242:in `verify_authenticity_token'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:428:in `block in make_lambda'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:200:in `block (2 levels) in halting'
+actionpack (6.0.3.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:201:in `block in halting'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:513:in `each'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:134:in `run_callbacks'
+actionpack (6.0.3.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.3.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.3.2) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.3.2) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.3.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.3.2) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.3.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.3.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.3.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.2) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.3.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.3) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.3) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/posts/new" for 172.17.0.1 at 2022-12-03 13:31:36 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 9.5ms | Allocations: 24)
+  Rendered posts/new.html.erb within layouts/application (Duration: 9.9ms | Allocations: 95)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.0ms | Allocations: 4148)
+
+
+Started POST "/create" for 172.17.0.1 at 2022-12-03 13:31:47 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#new as HTML
+  Parameters: {"authenticity_token"=>"5wYwpfVzg6rvp3LPK82u3iPmVXJxMOeKjLsprA77J4/j/IIQfC+g/80qq/bTVOXMMQAYri+Qm47LspBXT18CMQ==", "title"=>"Merry Christmas!", "content"=>"테스트 문자!"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 85.5ms | Allocations: 24)
+  Rendered posts/new.html.erb within layouts/application (Duration: 86.0ms | Allocations: 95)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 93ms (Views: 92.0ms | ActiveRecord: 0.0ms | Allocations: 4163)
+
+
+Started GET "/posts" for 172.17.0.1 at 2022-12-03 13:32:03 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (84.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:137
+  Rendered posts/index.html.erb within layouts/application (Duration: 85.8ms | Allocations: 608)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 91ms (Views: 5.4ms | ActiveRecord: 84.7ms | Allocations: 4697)
+
+
+Started GET "/posts" for 172.17.0.1 at 2022-12-03 13:34:38 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 231)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.0ms | Allocations: 5245)
+
+
+Started GET "/posts/new" for 172.17.0.1 at 2022-12-03 13:34:40 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 0.5ms | Allocations: 154)
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 555)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 7.8ms | ActiveRecord: 21.4ms | Allocations: 8671)
+
+
+Started GET "/posts" for 172.17.0.1 at 2022-12-03 13:34:49 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 59.2ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 67ms (Views: 65.7ms | ActiveRecord: 0.0ms | Allocations: 4033)
+
+
+Started GET "/posts/new" for 172.17.0.1 at 2022-12-03 13:34:51 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 67.3ms | Allocations: 24)
+  Rendered posts/new.html.erb within layouts/application (Duration: 67.6ms | Allocations: 95)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 82ms (Views: 80.3ms | ActiveRecord: 0.0ms | Allocations: 4127)
+
+
+Started GET "/posts" for 172.17.0.1 at 2022-12-03 13:35:27 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 237)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.0ms | Allocations: 5171)
+
+
+Started GET "/posts" for 172.17.0.1 at 2022-12-03 13:35:48 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 237)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 60ms (Views: 58.5ms | ActiveRecord: 0.0ms | Allocations: 5169)
+
+
+Started GET "/posts/new" for 172.17.0.1 at 2022-12-03 13:36:01 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 85.3ms | Allocations: 153)
+  Rendered posts/new.html.erb within layouts/application (Duration: 86.6ms | Allocations: 554)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 95ms (Views: 93.2ms | ActiveRecord: 0.0ms | Allocations: 4737)
+
+
+Started POST "/create" for 172.17.0.1 at 2022-12-03 13:36:28 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#new as HTML
+  Parameters: {"authenticity_token"=>"67t7GT6vi6mxklZQFaM3n/q9+jSK3cwz7R3MIKKnOKrvQcmst/Oo/JMfj2ntOnyN6Fu36NR9sDeqFHXb4wMdFA==", "title"=>"Merry Christmas!", "content"=>"테스트 문자!"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 0.2ms | Allocations: 24)
+  Rendered posts/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 95)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 41ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 4167)
+
+
+Started GET "/watchposts" for 172.17.0.1 at 2022-12-03 13:38:01 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/watchposts"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.3) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.3) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/watchposts" for 172.17.0.1 at 2022-12-03 13:38:10 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PostsController#watch as HTML
+  Rendering posts/watch.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/watch.html.erb:95
+  Rendered posts/watch.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1411)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 0.4ms | Allocations: 6189)
+
+
+Started GET "/rails/db" for 172.17.0.1 at 2022-12-03 13:38:26 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/rails/db"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.3) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.3) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/watchposts" for 172.17.0.1 at 2022-12-03 13:38:57 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#watch as HTML
+  Rendering posts/watch.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/watch.html.erb:98
+  Rendered posts/watch.html.erb within layouts/application (Duration: 1.7ms | Allocations: 869)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 31.4ms | ActiveRecord: 0.1ms | Allocations: 5877)
+
+
+Started GET "/watchposts" for 172.17.0.1 at 2022-12-03 13:39:17 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#watch as HTML
+  Rendering posts/watch.html.erb within layouts/application
+  [1m[36mPost Load (37.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/watch.html.erb:98
+  Rendered posts/watch.html.erb within layouts/application (Duration: 39.8ms | Allocations: 870)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 9.9ms | ActiveRecord: 37.9ms | Allocations: 5870)
+
+
+Started GET "/watchposts" for 172.17.0.1 at 2022-12-03 13:39:26 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#watch as HTML
+  Rendering posts/watch.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/watch.html.erb:98
+  Rendered posts/watch.html.erb within layouts/application (Duration: 35.0ms | Allocations: 609)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 38.8ms | ActiveRecord: 0.1ms | Allocations: 4704)
+
+
+Started GET "/watchposts" for 172.17.0.1 at 2022-12-03 13:44:17 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#watch as HTML
+  Rendering posts/watch.html.erb within layouts/application
+  [1m[36mPost Load (92.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/watch.html.erb:98
+  Rendered posts/watch.html.erb within layouts/application (Duration: 93.6ms | Allocations: 609)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 99ms (Views: 6.2ms | ActiveRecord: 92.3ms | Allocations: 4706)
+
+
+Started GET "/watchposts" for 172.17.0.1 at 2022-12-03 13:45:36 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#watch as HTML
+  Rendering posts/watch.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/watch.html.erb:98
+  Rendered posts/watch.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1468)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1491ms (Views: 1484.0ms | ActiveRecord: 0.4ms | Allocations: 92130)
+
+
+Started GET "/create" for 172.17.0.1 at 2022-12-03 13:45:41 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/create"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.3) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.3) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/rails/db" for 172.17.0.1 at 2022-12-03 13:45:57 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RailsDb::DashboardController#index as HTML
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/dashboard/index.html.erb within layouts/rails_db/application
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/dashboard/index.html.erb within layouts/rails_db/application (Duration: 5.1ms | Allocations: 843)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_header.html.erb (Duration: 6.2ms | Allocations: 2203)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_sidebar.html.erb (Duration: 1.5ms | Allocations: 449)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_gems.html.erb (Duration: 0.7ms | Allocations: 453)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_footer.html.erb (Duration: 3.3ms | Allocations: 1716)
+Completed 200 OK in 802ms (Views: 797.4ms | ActiveRecord: 0.3ms | Allocations: 62740)
+
+
+Started GET "/rails/db/tables/posts/data" for 172.17.0.1 at 2022-12-03 13:46:01 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RailsDb::TablesController#data as JS
+  Parameters: {"table_id"=>"posts"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/data.js.erb
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_exp_col.html.erb (Duration: 0.6ms | Allocations: 141)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_condition_fields.html.erb (Duration: 285.6ms | Allocations: 31252)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_condition_fields.html.erb (Duration: 6.6ms | Allocations: 5558)
+  [1m[36m Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_sql.html.erb (Duration: 68.9ms | Allocations: 115)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_data.html.erb (Duration: 397.6ms | Allocations: 48386)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/data.js.erb (Duration: 400.4ms | Allocations: 49794)
+Completed 200 OK in 584ms (Views: 471.7ms | ActiveRecord: 1.4ms | Allocations: 55248)
+
+
+Started POST "/create" for 172.17.0.1 at 2022-12-03 13:46:04 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#new as HTML
+  Parameters: {"authenticity_token"=>"fPJLxlPlyBwKLygmSBfaGva/v0WJaaRFB9bdFUv97AN4CPlz2rnrSSii8R+wjpEI5FnymdfJ2EFA32TuClnJvQ==", "title"=>"Merry Christmas!", "content"=>"테스트 문자!"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 0.3ms | Allocations: 157)
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 563)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 89ms (Views: 5.7ms | ActiveRecord: 77.4ms | Allocations: 8135)
+
+
+Started GET "/rails/db/tables/posts/data" for 172.17.0.1 at 2022-12-03 13:46:07 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RailsDb::TablesController#data as HTML
+  Parameters: {"table_id"=>"posts"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/data.html.erb within layouts/rails_db/application
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_exp_col.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_condition_fields.html.erb (Duration: 75.1ms | Allocations: 5710)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_condition_fields.html.erb (Duration: 6.5ms | Allocations: 5558)
+  [1m[36m Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_sql.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_data.html.erb (Duration: 101.5ms | Allocations: 20933)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/data.html.erb within layouts/rails_db/application (Duration: 102.4ms | Allocations: 21261)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_header.html.erb (Duration: 1.4ms | Allocations: 1128)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_sidebar.html.erb (Duration: 0.5ms | Allocations: 213)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_gems.html.erb (Duration: 0.2ms | Allocations: 173)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_footer.html.erb (Duration: 0.8ms | Allocations: 648)
+Completed 200 OK in 278ms (Views: 192.6ms | ActiveRecord: 66.2ms | Allocations: 36958)
+
+
+Started GET "/create" for 172.17.0.1 at 2022-12-03 13:46:45 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/create"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.3) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.3) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/posts/new" for 172.17.0.1 at 2022-12-03 13:48:35 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 0.2ms | Allocations: 25)
+  Rendered posts/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 97)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 6.9ms | ActiveRecord: 1.1ms | Allocations: 8292)
+
+
+Started POST "/create" for 172.17.0.1 at 2022-12-03 13:48:56 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"rAESjog+RUUQg12nsvX8JZm/IjpddLAd1QHAU9T7vQmo+6A7AWJmEDIOhJ5KbLc3i1lv5gPUzBmSCHmolV+Ytw==", "title"=>"Merry Christmas!", "content"=>"테스트 문자!\r\n메리 크리스마스!"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:32:in `create'
+  [1m[36mPost Create (22.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Merry Christmas!"], ["content", "테스트 문자!\r\n메리 크리스마스!"], ["created_at", "2022-12-03 13:48:56.506397"], ["updated_at", "2022-12-03 13:48:56.506397"]]
+  ↳ app/controllers/posts_controller.rb:32:in `create'
+  [1m[35m (23.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:32:in `create'
+No template found for PostsController#create, rendering head :no_content
+Completed 204 No Content in 56ms (ActiveRecord: 45.2ms | Allocations: 6326)
+
+
+Started POST "/create" for 172.17.0.1 at 2022-12-03 13:48:58 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"rAESjog+RUUQg12nsvX8JZm/IjpddLAd1QHAU9T7vQmo+6A7AWJmEDIOhJ5KbLc3i1lv5gPUzBmSCHmolV+Ytw==", "title"=>"Merry Christmas!", "content"=>"테스트 문자!\r\n메리 크리스마스!"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:32:in `create'
+  [1m[36mPost Create (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Merry Christmas!"], ["content", "테스트 문자!\r\n메리 크리스마스!"], ["created_at", "2022-12-03 13:48:58.327350"], ["updated_at", "2022-12-03 13:48:58.327350"]]
+  ↳ app/controllers/posts_controller.rb:32:in `create'
+  [1m[35m (29.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:32:in `create'
+No template found for PostsController#create, rendering head :no_content
+Completed 204 No Content in 37ms (ActiveRecord: 30.5ms | Allocations: 3976)
+
+
+Started GET "/rails/db/tables/posts/data" for 172.17.0.1 at 2022-12-03 13:49:00 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RailsDb::TablesController#data as HTML
+  Parameters: {"table_id"=>"posts"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/data.html.erb within layouts/rails_db/application
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_exp_col.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_condition_fields.html.erb (Duration: 76.2ms | Allocations: 5710)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_condition_fields.html.erb (Duration: 6.6ms | Allocations: 5558)
+  [1m[36m Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_row.html.erb (Duration: 2.8ms | Allocations: 1120)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_row.html.erb (Duration: 1.7ms | Allocations: 849)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_sql.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_data.html.erb (Duration: 187.2ms | Allocations: 26021)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/data.html.erb within layouts/rails_db/application (Duration: 187.4ms | Allocations: 26088)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_header.html.erb (Duration: 1.4ms | Allocations: 1135)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_sidebar.html.erb (Duration: 0.5ms | Allocations: 215)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_gems.html.erb (Duration: 0.1ms | Allocations: 173)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_footer.html.erb (Duration: 0.7ms | Allocations: 648)
+Completed 200 OK in 264ms (Views: 203.3ms | ActiveRecord: 40.9ms | Allocations: 41360)
+
+
+Started GET "/rails/db/tables/posts/edit?pk_id=2" for 172.17.0.1 at 2022-12-03 13:49:02 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RailsDb::TablesController#edit as JS
+  Parameters: {"pk_id"=>"2", "table_id"=>"posts"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36m Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/edit.js.erb
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_edit.html.erb (Duration: 55.6ms | Allocations: 15070)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/edit.js.erb (Duration: 57.6ms | Allocations: 16872)
+Completed 200 OK in 76ms (Views: 28.1ms | ActiveRecord: 31.0ms | Allocations: 23857)
+
+
+Started GET "/rails/db/tables/posts/destroy?pk_id=2" for 172.17.0.1 at 2022-12-03 13:49:13 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RailsDb::TablesController#destroy as JS
+  Parameters: {"pk_id"=>"2", "table_id"=>"posts"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35m (20.2ms)[0m  [1m[31mDELETE FROM posts WHERE id = '2';[0m
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/destroy.js.erb
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/shared/_exp_col.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_condition_fields.html.erb (Duration: 10.5ms | Allocations: 5710)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_condition_fields.html.erb (Duration: 57.4ms | Allocations: 5558)
+  [1m[36m Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_row.html.erb (Duration: 2.0ms | Allocations: 857)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_sql.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/_data.html.erb (Duration: 96.8ms | Allocations: 24556)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/rails_db-2.4.1/app/views/rails_db/tables/destroy.js.erb (Duration: 171.3ms | Allocations: 25648)
+Completed 200 OK in 473ms (Views: 170.4ms | ActiveRecord: 95.3ms | Allocations: 31157)
+
+
+Started GET "/posts/watchposts" for 172.17.0.1 at 2022-12-03 13:49:25 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"watchposts"}
+  [1m[36mPost Load (15.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:62:in `set_post'
+Completed 404 Not Found in 18ms (ActiveRecord: 15.3ms | Allocations: 1420)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=watchposts):
+  
+app/controllers/posts_controller.rb:62:in `set_post'
+Started GET "/watchposts" for 172.17.0.1 at 2022-12-03 13:49:31 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#watch as HTML
+  Rendering posts/watch.html.erb within layouts/application
+  [1m[36mPost Load (26.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/watch.html.erb:98
+  Rendered posts/watch.html.erb within layouts/application (Duration: 28.1ms | Allocations: 653)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 7.3ms | ActiveRecord: 26.7ms | Allocations: 4808)
+
+
